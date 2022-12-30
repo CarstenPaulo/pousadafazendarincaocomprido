@@ -1,0 +1,247 @@
+{% extends 'base.html' %} {% load static %} {% block content %} {% include '_navbar.html' %}
+
+
+<section id="banner">
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-12 col-lg-6">
+                <div class="title">
+                    <small class="mt-4"
+                        style="color: black; letter-spacing: 3px; font-weight: bold; font-family: Poppins, sans-serif;">Apresentação</small>
+                    <h1 class="mt-4"
+                        style="font-family: Poppins, sans-serif; color: #2a303b; line-height: 1.3; font-weight: 500;">
+                        Seja bem-vindo a Pousada Fazenda Rincão Comprido</h1>
+
+                    <p style="font-size: 18px; font-family: Poppins, sans-serif;" class="mt-4 mb-4">
+                        A Pousada Fazenda Rincão Comprido está localizada em área rural do município de Urubici!
+                        <br> Um dos bairros com a mais alta altitude, onde é o primeiro lugar a nevar, também é
+                        contemplado com os campos cobertos de geadas pela manhã e rodeada de muita área verde
+                        preservada.
+                        <br>
+                        Possui uma casa de alto padrão, com capacidade para até 12 pessoas.
+                        <br>
+                        Além de cozinha
+                        completa, 3 suítes com banheiras e ar-condicionado, área de churrasqueira, Fire Pit, Wi-fi, TV'S
+                        Smart, sala
+                        com lareira, etc.
+                        <br>
+                        <b style="font-size: 30px;"> Sejam bem-vindos! </b>
+                    </p>
+
+                    <small class="float-right"
+                        style="color: black; letter-spacing: 3px; font-weight: bold; font-family: Poppins, sans-serif;">Anfitriões:
+                        Júlio & Lígia</small>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="about-us-thumbnail mb-100 wow fadeInUp" data-wow-delay="700ms">
+                    <div class="row no-gutters">
+                        <div class="col-4">
+                            <div class="single-thumb">
+                                <img class="img-responsive bounce" src="{% static 'images/index/sacada1.jpg' %}"
+                                    width="345" alt="">
+                            </div>
+                            <div class="single-thumb">
+                                <img class="img-responsive bounce" src="{% static 'images/index/quarto2.jpg' %}"
+                                    width="345" alt="">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="single-thumb">
+                                <img class="img-responsive bounce" src="{% static 'images/index/firepit1.jpg' %}"
+                                    width="312">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="comodos">
+    <div class="container mt-4">
+        <small style="color: black; letter-spacing: 3px; font-weight: bold; font-family: Poppins, sans-serif;">Cômodos
+            da casa</small>
+    </div>
+    <div class="container mt-2">
+        <div class="row d-flex justify-content-center">
+            <div class="boxtitle1">
+                <a href="{% url 'cozinha' %}" class="href">
+                    <div class="box1">
+                        <img src="{% static 'images/cozinha/cozinhabg.png' %}" height="80" alt="">
+                        <h3 class="title-comodos">Cozinha</h3>
+                    </div>
+                </a>
+            </div>
+
+            <a href="{% url 'sala' %}" class="href">
+                <div class="box1">
+                    <img src="{% static 'images/sala/sala-de-estar.png' %}" height="80" alt="">
+                    <h3 class="title-comodos">Sala</h3>
+                </div>
+            </a>
+
+            <a href="{% url 'quartos' %}" class="href">
+                <div class="box1">
+                    <img src="{% static 'images/suites/suite.png' %}" height="80" alt="">
+                    <h3 class="title-comodos">Quartos</h3>
+                </div>
+            </a>
+
+
+            <a href="{% url 'lazer' %}" class="href">
+                <div class="box1">
+                    <img src="{% static 'images/lazer/grade.png' %}" height="80" alt="">
+                    <h3 class="title-comodos">Lazer</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section id="photos">
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <div style="padding-right: 0px;  padding-left: 0px;" class="col-sm-3 ">
+                <img src="{% static 'images/index/cozinha2.png' %}" class="img-fluid" alt="Responsive image">
+            </div>
+
+            <div style="padding-right: 0px;  padding-left: 0px;" class="col-sm-3">
+                <img src="{% static 'images/index/sala2.png' %}" class="img-fluid" alt="Responsive image">
+            </div>
+
+            <div style="padding-right: 0px;  padding-left: 0px;" class="col-sm-3">
+                <img src="{% static 'images/index/quarto2.png' %}" class="img-fluid" alt="Responsive image">
+            </div>
+
+            <div style="padding-right: 0px;  padding-left: 0px;" class="col-sm-3">
+                <img src="{% static 'images/index/banheira2.png' %}" class="img-fluid" alt="Responsive image">
+            </div>
+
+
+            <div style="padding-right: 0px;  padding-left: 0px;" class="col-sm-3 ">
+                <img src="{% static 'images/index/sacada2.png' %}" class="img-fluid" alt="Responsive image">
+            </div>
+
+            <div style="padding-right: 0px;  padding-left: 0px;" class="col-sm-3">
+                <img src="{% static 'images/index/churrasqueira2.png' %}" class="img-fluid" alt="Responsive image">
+            </div>
+
+            <div style="padding-right: 0px;  padding-left: 0px;" class="col-sm-3">
+                <img src="{% static 'images/index/fire-pit2.png' %}" class="img-fluid" alt="Responsive image">
+            </div>
+
+            <div style="padding-right: 0px;  padding-left: 0px;" class="col-sm-3">
+                <img src="{% static 'images/index/casa2.png' %}" class="img-fluid" alt="Responsive image">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<section id="about">
+    <div class="container mt-4">
+        <small style="color: black; letter-spacing: 3px; font-weight: bold; font-family: Poppins, sans-serif;">
+            Urubici
+        </small>
+    </div>
+    <div style="background: #000000;">
+        <div class="container">
+            <div class="row">
+                <div style="color: beige; font-family: Poppins, sans-serif; font-size: 19px; font-weight: bold;"
+                    class="col-md-8 mt-4 pt-4 mb-2">
+                    Localizado na Serra Catarinense, à 175km de distância da capital do estado, Florianópolis.
+                    Urubici
+                    está em uma altitude
+                    de 915m do nível do mar em área urbana, porém em área rural possui altitudes mais elevadas e
+                    também
+                    é conhecido como uma
+                    das cidades mais frias do Brasil.
+                    O Município era habitado pelos índios da tribo Xokleng, quando os primeiros colonizadores de
+                    origem
+                    Européia (sendo eles
+                    italianos, alemães, poloneses, letões) chegaram na região e descobriram que o solo do vale do
+                    rio
+                    canoas é muito fértil
+                    e perceptível aos olhos dos colonizadores, que logo fixaram residência no local e começaram a
+                    agricultura e pecuária que
+                    era a principal fonte de renda do Município no seu início.
+                    Atualmente, além da agricultura e a pecuária, Urubici também é mundialmente conhecido pelas suas
+                    belezas naturais,
+                    turismo rural, cânions, cachoeiras, parques e atrações turísticas. Também é possível destacar
+                    que a
+                    cidade é de pequeno
+                    porte, onde a tranquilidade e contato com a natureza aumenta a qualidade de vida dos moradores.
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div>
+                        <img class="img-fluid" src="{% static 'images/index/urubici.jpg' %}" width="100%"
+                            alt="Urubici & erra Catarinense">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="map">
+    <div class="container">
+        <small style="color: black; letter-spacing: 3px; font-weight: bold; font-family: Poppins, sans-serif;">
+            Localização
+        </small>
+    </div>
+    <div class="container-fluid mb-4">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14075.199635783234!2d-49.6275646!3d-28.1221274!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x45c104d93da980ec!2sPousada%20Fazenda%20Rinc%C3%A3o%20Comprido!5e0!3m2!1spt-BR!2sbr!4v1671137175245!5m2!1spt-BR!2sbr"
+            width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</section>
+<style>
+    #map {
+        padding-top: 40px;
+    }
+
+    .box1 {
+        height: 165px;
+        width: 165px;
+        text-align: center;
+        background-color: beige;
+        padding: 20px;
+        margin: 2px;
+        border-radius: 10px;
+        box-shadow: 0 2px 14px 5px rgb(20 20 20 / 5%);
+
+
+    }
+
+    .box1:hover {
+        border: 25px solid #f1f1f1;
+    }
+
+    .title-comodos {
+        font-family: sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        margin-top: 25px;
+        line-height: 1.3;
+        color: #2A303B;
+    }
+</style>
+
+
+
+{% include '_footer.html' %}
+
+
+
+
+
+
+{% endblock %}

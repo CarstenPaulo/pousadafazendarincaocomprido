@@ -1,0 +1,103 @@
+{% extends 'base.html' %} {% load static %} {% block content %} {% include '_navbar.html' %}
+
+
+
+
+
+<section id="gallery">
+    <div class="container">
+        <div class="mt-4 mb-4">
+            <small
+                style="color: black; letter-spacing: 3px; font-weight: bold; font-family: Poppins, sans-serif; font-size:18px;">Fotos
+                Sala </small>
+        </div>
+        <div class="row ">
+            <div class="col-md-4 mb-1">
+                <a href="{% static 'images/sala/sala1.jpg' %}" data-lightbox="models" data-title="cozinha 1"
+                    class="href">
+                    <img src="{% static 'images/sala/sala1.jpg' %}" class="img-fluid" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 mb-1">
+                <a href="{% static 'images/sala/sala2.jpg' %}" data-lightbox="models" data-title="cozinha 1" class="href">
+                    <img src="{% static 'images/sala/sala2.jpg' %}" class="img-fluid" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 mb-1">
+                <a href="{% static 'images/sala/sala3.jpg' %}" data-lightbox="models" data-title="cozinha 1" class="href">
+                    <img src="{% static 'images/sala/sala3.jpg' %}" class="img-fluid" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 mb-1">
+                <a href="{% static 'images/sala/sala4.jpg' %}" data-lightbox="models" data-title="cozinha 1" class="href">
+                    <img src="{% static 'images/sala/sala4.jpg' %}" class="img-fluid" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 mb-1">
+                <a href="{% static 'images/sala/sala5.jpg' %}" data-lightbox="models" data-title="cozinha 1" class="href">
+                    <img src="{% static 'images/sala/sala5.jpg' %}" class="img-fluid" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 mb-1">
+                <a href="{% static 'images/sala/sala6.jpg' %}" data-lightbox="models" data-title="cozinha 1" class="href">
+                    <img src="{% static 'images/sala/sala6.jpg' %}" class="img-fluid" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 mb-1">
+                <a href="{% static 'images/sala/sala7.jpg' %}" data-lightbox="models" data-title="cozinha 1" class="href">
+                    <img src="{% static 'images/sala/sala7.jpg' %}" class="img-fluid" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 mb-1">
+                <a href="{% static 'images/sala/sala8.jpg' %}" data-lightbox="models" data-title="cozinha 1" class="href">
+                    <img src="{% static 'images/sala/sala8.jpg' %}" class="img-fluid" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 mb-1">
+                <a href="{% static 'images/sala/sala9.jpg' %}" data-lightbox="models" data-title="cozinha 1" class="href">
+                    <img src="{% static 'images/sala/sala9.jpg' %}" class="img-fluid" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 mb-1">
+                <a href="{% static 'images/sala/sala10.jpg' %}" data-lightbox="models" data-title="cozinha 1" class="href">
+                    <img src="{% static 'images/sala/sala10.jpg' %}" class="img-fluid" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 mb-1">
+                <a href="{% static 'images/sala/sala11.jpg' %}" data-lightbox="models" data-title="cozinha 1" class="href">
+                    <img src="{% static 'images/sala/sala11.jpg' %}" class="img-fluid" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    #algo .container {
+        width: 100%;
+        min-height: 100vh;
+        align-items: center;
+        justify-items: center;
+        padding: 50px 8%;
+    }
+
+    .container .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit), minmax(250px, 1fr);
+        grid-gap: 30px;
+    }
+
+    .gallery img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+</style>
+
+
+{% include '_footer.html' %}
+
+
+
+
+
+{% endblock %}

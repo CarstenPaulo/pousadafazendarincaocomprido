@@ -1,0 +1,65 @@
+{% load static %}
+<section id="menu">
+
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #212529;">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'index' %}">Pousada Fazenda Rincão Comprido</a>
+            <i class="fa-solid fa-phone"></i>
+            <form class="form-inline my-2 my-lg-0">
+                <i style="color: white;" class="fa-sharp fa-solid fa-phone mr-4"> +55 (49) 9 9132-4760
+                </i>
+                <a href="https://www.instagram.com/fazendarincaocomprido_urubici/" class="href"> <i
+                        style="color: white;" class="fa-brands fa-instagram mr-4"></i></a>
+                <i style="color: white;" class="fa-brands fa-square-facebook mr-4"></i>
+                <i style="color: white;" class="fa fa-tripadvisor mr-4" aria-hidden="true"></i>
+            </form>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #000000">
+        <div class="container">
+            <!-- melhorar resolução da imagem-->
+            <a class="navbar-brand" href="{% url 'index' %}"> <img src="{% static 'images/logo/logo-preto.jpeg' %}"
+                    height="110" alt=""></a>
+
+            <!--navbar toggler-->
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars" style="color: white; font-size: 20px; "></i>
+            </button>
+
+            <!-- menu -->
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="mr-auto">
+                </ul>
+                <form style="font-size: 18px;" class="menu">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown active ">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Casa</a>
+                            <div class="dropdown-menu ">
+                                <a class="dropdown-item" href="{% url 'cozinha' %}">Cozinha</a>
+                                <a class="dropdown-item" href="{% url 'sala' %}">Sala</a>
+                                <a class="dropdown-item" href="{% url 'quartos' %}">Quarto</a>
+                                <a class="dropdown-item" href="{% url 'lazer' %}">Lazer</a>
+                            </div>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'urubici' %}">Turismo Urubici <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a style="font-family: poppins, sans-serif; font-size: medium; text-transform: capitalize; background-color: brown;"
+                                ; class="nav-link"
+                                href="https://api.whatsapp.com/send?phone=+55+4991324760&text=Olá, eu vi o anúncio no site e gostaria de mais informações....">Reserve
+                                Agora</a>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </nav>
+</section>

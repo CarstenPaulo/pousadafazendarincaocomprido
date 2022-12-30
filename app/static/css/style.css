@@ -1,0 +1,35 @@
+.about-us-thumbnail .single-thumb:first-child {
+    margin-bottom: -40px;
+}
+
+.about-us-thumbnail .single-thumb {
+    position: relative;
+    z-index: 1;
+    margin: -10px;
+    display: block;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.bounce {
+    padding: 20px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.bounce:hover {
+    animation: bounce 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
