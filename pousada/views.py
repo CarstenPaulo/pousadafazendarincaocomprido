@@ -14,6 +14,9 @@ def sala(request):
 def quartos(request):
     return render(request, 'quartos/quartos.html')
 
+def mezanino(request):
+    return render(request, 'mezanino/mezanino.html')
+
 def lazer(request):
     return render(request, 'lazer/lazer.html')
 

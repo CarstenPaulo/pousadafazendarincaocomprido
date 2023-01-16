@@ -39,17 +39,23 @@
                         </li>
                         <li class="nav-item dropdown active ">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">Casa</a>
+                                aria-haspopup="true" aria-expanded="false">Pousada</a>
                             <div class="dropdown-menu ">
                                 <a class="dropdown-item" href="{% url 'cozinha' %}">Cozinha</a>
                                 <a class="dropdown-item" href="{% url 'sala' %}">Sala</a>
-                                <a class="dropdown-item" href="{% url 'quartos' %}">Quarto</a>
+                                <a class="dropdown-item" href="{% url 'quartos' %}">Suítes</a>
+                                <a class="dropdown-item" href="{% url 'mezanino' %}">Mezanino</a>
                                 <a class="dropdown-item" href="{% url 'lazer' %}">Lazer</a>
                             </div>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="{% url 'urubici' %}">Turismo Urubici <span
-                                    class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="#map">Localização</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'urubici' %}">Turismo Urubici</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#contato">Contato</a>
                         </li>
                         <li class="nav-item active">
                             <a style="font-family: poppins, sans-serif; font-size: medium; text-transform: capitalize; background-color: brown;"

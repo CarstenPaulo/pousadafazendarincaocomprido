@@ -9,6 +9,7 @@ urlpatterns = [
     path('cozinha',views.cozinha, name='cozinha'),
     path('sala',views.sala, name='sala'),
     path('quartos',views.quartos, name='quartos'),
+    path('mezanino',views.mezanino, name='mezanino'),
     path('lazer',views.lazer, name='lazer'),
     
     #urubici & duvidas frequentes
