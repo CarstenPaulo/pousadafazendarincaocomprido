@@ -1,5 +1,18 @@
-{% extends 'base.html' %} {% load static %} {% block content %} {% include '_navbar.html' %}
+{% extends 'base.html' %} {% load static %} {% block content %} {% include '_navbar.html' %}{% load crispy_forms_tags %}
 
+
+<style>
+    .bemvindos {
+        text-align: center;
+    }
+</style>
+{% if messages %}
+<ul style="background-color: green; list-style: none;font-family: Poppins, sans-serif; font-size: 20px;" class="messages success text-center">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+        {% endfor %}
+</ul>
+{% endif %}
 <section id="banner">
     <div class="container">
         <div class="row mt-4">
@@ -24,11 +37,13 @@
                         Smart, sala
                         com lareira, etc.
                         <br>
-                        <b style="font-size: 30px; margin-left: 125px;"> Sejam bem-vindos! </b>
+                        <b class="bemvindos d-flex justify-content-center" style="font-size: 30px; margin-top: 20px;">
+                            Sejam bem-vindos!
+                        </b>
                     </p>
 
                     <small class="float-right"
-                        style="color: black; letter-spacing: 3px; font-weight: bold; font-family: Poppins, sans-serif;">Anfitriões:
+                        style="color: black; letter-spacing: 3px; font-weight: bold; font-family: Poppins, sans-serif; margin-bottom: 30px; margin-top: -15px;">Anfitriões:
                         Júlio & Lígia</small>
                 </div>
             </div>
@@ -37,8 +52,8 @@
                     <div class="row no-gutters">
                         <div class="col-12">
                             <div class="single-thumb">
-                                <img class="img-responsive bounce" src="{% static 'images/index/index_fotos.jpg' %}"
-                                    alt="">
+                                <img class="img-responsive bounce d-flex justify-content-center"
+                                    src="{% static 'images/index/index_fotos.jpg' %}" alt="">
                             </div>
                         </div>
                     </div>
@@ -128,7 +143,7 @@
 
 
             <div class="col-sm-3 imagens">
-                <img src="{% static 'images/index/mezanino_index.jpg' %}" height="800" class="img-fluid"
+                <img src="{% static 'images/suites/quarto33.jpg' %}" height="800" class="img-fluid"
                     alt="Responsive image">
             </div>
 
@@ -239,34 +254,15 @@
         entre em
         contato conosco por e-mail ou pelo Whatsapp</p>
     <div class="container">
-        <form>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="inputEmail4">Nome</label>
-                    <input type="text" class="form-control" placeholder="Nome">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="inputPassword4">Sobrenome</label>
-                    <input type="text" class="form-control" placeholder="Sobrenome">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="inputPassword4">E-mail</label>
-                    <input type="email" class="form-control" placeholder="E-mail">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="inputPassword4">Telefone</label>
-                    <input type="number" class="form-control" placeholder="Telefone/Celular">
-                </div>
-            </div>
-            <div class="form-group">
-
-                <label for="inputAddress2">Mensagem</label>
-                <textarea class="form-control" name="" id="" cols="30" rows="10" placeholder="Mensagem...."></textarea>
-            </div>
+        <form action="{% url 'index' %}" method="POST">
+            {% csrf_token %}
+            {{ form|crispy }}
             <button type="submit" class="btn btn-primary float-right">Enviar</button>
         </form>
     </div>
 </section>
+<br>
+<br>
 <style>
     #map {
         padding-top: 40px;
@@ -300,8 +296,6 @@
 </style>
 
 
-
-{% include '_footer.html' %}
 
 
 

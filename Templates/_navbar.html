@@ -1,4 +1,23 @@
 {% load static %}
+<style>
+    @media (max-width: 768px) {
+        .removereserveagora {
+            display: none;
+        }
+        .removecontato {
+            display: none;
+        }
+    }
+     @media (max-width: 574px) {
+        .removereserveagora {
+            display: block;
+        }
+        .removecontato {
+            display: block;
+        }
+    }
+</style>
+
 <section id="menu">
 
     <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #212529;">
@@ -12,6 +31,8 @@
                         style="color: white;" class="fa-brands fa-instagram mr-4"></i></a>
                 <i style="color: white;" class="fa-brands fa-square-facebook mr-4"></i>
                 <i style="color: white;" class="fa fa-tripadvisor mr-4" aria-hidden="true"></i>
+                <i style="color: white;" class="fa fa-google mr-4" aria-hidden="true"></i>
+
             </form>
         </div>
     </nav>
@@ -52,14 +73,14 @@
                             <a class="nav-link" href="#map">Localização</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="{% url 'urubici' %}">Turismo Urubici</a>
+                            <a class="nav-link " href="{% url 'urubici' %}">Turismo Urubici</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="#contato">Contato</a>
+                            <a class="nav-link removecontato" href="#contato">Contato</a>
                         </li>
                         <li class="nav-item active">
                             <a style="font-family: poppins, sans-serif; font-size: medium; text-transform: capitalize; background-color: brown;"
-                                ; class="nav-link"
+                                ; class="nav-link removereserveagora"
                                 href="https://api.whatsapp.com/send?phone=+55+4991324760&text=Olá, eu vi o anúncio no site e gostaria de mais informações....">Reserve
                                 Agora</a>
                         </li>
