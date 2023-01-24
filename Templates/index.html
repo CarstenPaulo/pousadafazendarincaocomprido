@@ -7,7 +7,7 @@
     }
 </style>
 {% if messages %}
-<ul style="background-color: green; list-style: none;font-family: Poppins, sans-serif; font-size: 20px;" class="messages success text-center">
+<ul style="background-color: green; list-style: none;font-family: Poppins, sans-serif; font-size: 20px;" class="messages success text-center text-white">
     {% for message in messages %}
     <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
         {% endfor %}
