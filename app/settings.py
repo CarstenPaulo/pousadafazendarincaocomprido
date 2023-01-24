@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'fontawesomefree',
     'crispy_forms',
+    'pousada'
 ]
 
 MIDDLEWARE = [
