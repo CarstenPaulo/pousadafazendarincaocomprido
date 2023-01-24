@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-y%i=duzcv+8$d3#=j8pk(ozvuy+bms)2obn4ss)(278m^g97^_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*','uzrsfq.conteige.cloud','www.fazendarincaocomprido.com.br','fazendarincaocomprido.com.br']
 
@@ -147,5 +147,7 @@ EMAIL_HOST_PASSWORD = 'ocjjbjppziehziuc'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
-CSRF_TRUSTED_ORIGINS = ['https://www.fazendarincaocomprido.com.br','http://fazendarincaocomprido.com.br','fazendarincaocomprido.com.br']
+CSRF_TRUSTED_ORIGINS = ['https://www.fazendarincaocomprido.com.br','http://fazendarincaocomprido.com.br',]
+
+
 
