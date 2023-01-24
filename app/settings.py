@@ -147,5 +147,5 @@ EMAIL_HOST_PASSWORD = 'ocjjbjppziehziuc'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
-CSRF_TRUSTED_ORIGINS = ['https://fazendarincaocomprido.com.br/','https://*.127.0.0.1','https://www.fazendarincaocomprido.com.br/']
+CSRF_TRUSTED_ORIGINS = ['https://www.fazendarincaocomprido.com.br','http://fazendarincaocomprido.com.br','fazendarincaocomprido.com.br']
 
