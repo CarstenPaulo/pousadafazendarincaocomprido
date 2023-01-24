@@ -3,39 +3,31 @@ from pousada.forms import ContatoForm
 from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib import messages
+from django.template.loader import render_to_string
 
 def index(request):
     if request.method == 'POST':
         form = ContatoForm(request.POST)
+        
         if form.is_valid():
-            nome = request.POST.get('nome')
-            sobrenome = request.POST.get('sobrenome')
-            telefone = request.POST.get('telefone')
-            email = request.POST.get('email')
-            assunto = request.POST.get('assunto')
+            nome = form.cleaned_data['nome']
+            sobrenome = form.cleaned_data['sobrenome']
+            telefone = form.cleaned_data['telefone']
+            assunto = form.cleaned_data['assunto']
+ 
             
-            
-            data = {
+            html = render_to_string('mail/formulario-email.html', {
                 'nome':nome,
                 'sobrenome':sobrenome,
                 'telefone':telefone,
-                'email':email,
                 'assunto':assunto,
-            }        
+            })
             
-            dados = '''
+            send_mail('mensagem do texto', 'outra mensagem', 'rincaocomprido@gmail.com' ,['rincaocomprido@gmail.com'], html_message=html),
             
-            Nome: {}    
-            
-            Sobrenome: {}  
-            
-            Telefone: {}
-
-            Assunto: {}
-
-            '''.format(data['nome'],data['sobrenome'],data['telefone'],data['assunto'])
-            send_mail(data['nome'],dados, '', ['rincaocomprido@gmail.com'])
             messages.success(request, 'Email enviado com sucesso, entraremos em contato assim que possível.')
+            print(send_mail)
+            
         form = ContatoForm()
     else:
         form = ContatoForm()

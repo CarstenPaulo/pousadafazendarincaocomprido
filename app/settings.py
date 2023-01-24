@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-y%i=duzcv+8$d3#=j8pk(ozvuy+bms)2obn4ss)(278m^g97^_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*','uzrsfq.conteige.cloud','www.fazendarincaocomprido.com.br','fazendarincaocomprido.com.br']
+ALLOWED_HOSTS = ['https://flgjdm.conteige.cloud/','www.fazendarincaocomprido.com.br','fazendarincaocomprido.com.br','*']
 
 
 # Application definition
