@@ -31,11 +31,9 @@ def index(request):
             
             Telefone: {}
 
-            Email: {}
-
             Assunto: {}
 
-            '''.format(data['nome'],data['sobrenome'],data['telefone'],data['email'],data['assunto'])
+            '''.format(data['nome'],data['sobrenome'],data['telefone'],data['assunto'])
             send_mail(data['nome'],dados, '', ['rincaocomprido@gmail.com'])
             messages.success(request, 'Email enviado com sucesso, entraremos em contato assim que possível.')
         form = ContatoForm()
