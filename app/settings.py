@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-y%i=duzcv+8$d3#=j8pk(ozvuy+bms)2obn4ss)(278m^g97^_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*','uzrsfq.conteige.cloud','www.fazendarincaocomprido.com.br','fazendarincaocomprido.com.br']
 
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'fontawesomefree',
     'crispy_forms',
     'pousada'
+    
 ]
 
 MIDDLEWARE = [
@@ -107,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'pt-br'
+LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'America/Sao_Paulo'
 
