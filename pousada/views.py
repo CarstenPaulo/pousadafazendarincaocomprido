@@ -4,7 +4,9 @@ from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib import messages
 from django.template.loader import render_to_string
+from django.views.decorators.csrf import csrf_exempt   
 
+@csrf_exempt 
 def index(request):
     if request.method == 'POST':
         form = ContatoForm(request.POST)
@@ -23,7 +25,7 @@ def index(request):
                 'assunto':assunto,
             })
             
-            send_mail('mensagem do texto', 'outra mensagem', 'rincaocomprido@gmail.com' ,['rincaocomprido@gmail.com'], html_message=html),
+            send_mail('Informações sobre a reserva para:', '....', 'rincaocomprido@gmail.com' ,['rincaocomprido@gmail.com'], html_message=html,fail_silently=False,),
             
             messages.success(request, 'Email enviado com sucesso, entraremos em contato assim que possível.')
             print(send_mail)

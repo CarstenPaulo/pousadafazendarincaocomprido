@@ -1,17 +1,24 @@
 {% load static %}
 <style>
+    #menu {
+        margin: 0%;
+    }
+
     @media (max-width: 768px) {
         .removereserveagora {
             display: none;
         }
+
         .removecontato {
             display: none;
         }
     }
-     @media (max-width: 574px) {
+
+    @media (max-width: 574px) {
         .removereserveagora {
             display: block;
         }
+
         .removecontato {
             display: block;
         }
@@ -39,8 +46,8 @@
     <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #000000">
         <div class="container">
             <!-- melhorar resolução da imagem-->
-            <a class="navbar-brand" href="{% url 'index' %}"> <img src="{% static 'images/logo/logo-preto.jpeg' %}"
-                    height="110" alt=""></a>
+            <a class="navbar-brand" href="{% url 'index' %}"> <img src="{% static 'images/logo/logo-preto.png' %}"
+                    alt=""></a>
 
             <!--navbar toggler-->
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
